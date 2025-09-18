@@ -282,8 +282,59 @@ export default function LandingPage() {
         </div>
       </section>
 
+      {/* CTA Section */}
+      <section id="cta" className="relative py-32 bg-black overflow-hidden">
+        
+        
+        <div className="relative max-w-6xl mx-auto text-center px-4 sm:px-6 lg:px-8 z-10">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-5xl md:text-7xl font-bold text-white mb-8 leading-tight">
+              Read less. Know more.
+            </h2>
+            
+            <p className="text-xl md:text-2xl text-neutral-300 mb-12 leading-relaxed max-w-4xl mx-auto">
+              Watch AsterAI turn dense pages into clear answers—without the busywork.
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+              <Link href="/demo">
+                <HoverBorderGradient
+                  containerClassName="rounded-full"
+                  as="div"
+                  className="bg-black dark:bg-black text-white flex items-center space-x-3 px-10 py-5 font-bold text-xl"
+                >
+                  <Zap className="w-6 h-6" />
+                  <span>Launch demo</span>
+                  <ArrowRight className="w-6 h-6" />
+                </HoverBorderGradient>
+              </Link>
+              
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                className="flex items-center gap-4 text-neutral-400"
+              >
+                <div className="flex items-center gap-2">
+                  <Infinity className="w-5 h-5 text-blue-400" />
+                  <span>Free to try</span>
+                </div>
+                <div className="w-1 h-1 bg-neutral-600 rounded-full"></div>
+                <div className="flex items-center gap-2">
+                  <Lightbulb className="w-5 h-5 text-yellow-400" />
+                  <span>No setup</span>
+                </div>
+              </motion.div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
       {/* Meet The Team Section */}
-      <section className="relative py-32 bg-black">
+      <section id="about" className="relative py-32 bg-black">
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -415,57 +466,6 @@ export default function LandingPage() {
               </motion.div>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section id="about" className="relative py-32 bg-black overflow-hidden">
-        
-        
-        <div className="relative max-w-6xl mx-auto text-center px-4 sm:px-6 lg:px-8 z-10">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-5xl md:text-7xl font-bold text-white mb-8 leading-tight">
-              Read less. Know more.
-            </h2>
-            
-            <p className="text-xl md:text-2xl text-neutral-300 mb-12 leading-relaxed max-w-4xl mx-auto">
-              Watch AsterAI turn dense pages into clear answers—without the busywork.
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-              <Link href="/demo">
-                <HoverBorderGradient
-                  containerClassName="rounded-full"
-                  as="div"
-                  className="bg-black dark:bg-black text-white flex items-center space-x-3 px-10 py-5 font-bold text-xl"
-                >
-                  <Zap className="w-6 h-6" />
-                  <span>Launch demo</span>
-                  <ArrowRight className="w-6 h-6" />
-                </HoverBorderGradient>
-              </Link>
-              
-              <motion.div
-                whileHover={{ scale: 1.05 }}
-                className="flex items-center gap-4 text-neutral-400"
-              >
-                <div className="flex items-center gap-2">
-                  <Infinity className="w-5 h-5 text-blue-400" />
-                  <span>Free to try</span>
-                </div>
-                <div className="w-1 h-1 bg-neutral-600 rounded-full"></div>
-                <div className="flex items-center gap-2">
-                  <Lightbulb className="w-5 h-5 text-yellow-400" />
-                  <span>No setup</span>
-                </div>
-              </motion.div>
-            </div>
-          </motion.div>
         </div>
       </section>
 
